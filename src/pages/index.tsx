@@ -1,12 +1,9 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import TemplateMain from "@Templates/index";
 import OrganismHero from "@Organisms/hero";
-import OrganismServices from "@Organisms/services";
-import OrganismProjects from "@Organisms/projects";
-import OrganismClients from "@Organisms/clients";
-import OrganismContact from "@Organisms/contact";
 import Seo from "@Utils/seo";
-import { useTranslation } from "@Src/i18n";
+import I18n from "@Src/i18n";
 
 type IProject = {
   id?: string;
@@ -64,24 +61,25 @@ const ProjectsDataFake: IProject[] = [
   },
 ];
 
+const OrganismServices = dynamic(() => import("@Organisms/services"));
+const OrganismProjects = dynamic(() => import("@Organisms/projects"));
+const OrganismClients = dynamic(() => import("@Organisms/clients"));
+const OrganismContact = dynamic(() => import("@Organisms/contact"));
+
 const PageHome = () => {
-  const { t } = useTranslation();
+  const { t } = I18n.useTranslation();
   return (
     <>
       <Seo page="Home" />
       <TemplateMain t={t}>
         <OrganismHero t={t} idScroll="HeroScroll" />
-
         <OrganismServices t={t} idScroll="ServicesScroll" />
-
         <OrganismProjects
           t={t}
           idScroll="ProjectsScroll"
           projects={ProjectsDataFake}
         />
-
         <OrganismClients t={t} idScroll="ClientsScroll" />
-
         <OrganismContact t={t} idScroll="ContactScroll" />
       </TemplateMain>
     </>

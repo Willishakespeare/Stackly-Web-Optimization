@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@Src/*": ["src/*"],
+      "@Public/*": ["public/*"],
+      "@Atoms/*": ["src/components/atoms/*"],
+      "@Molecules/*": ["src/components/molecules/*"],
+      "@Organisms/*": ["src/components/organisms/*"],
+      "@Templates/*": ["src/components/templates/*"],
+      "@Utils/*": ["src/utils/*"],
+      "@Assets/*": ["src/assets/*"],
+      "@Styles/*": ["src/styles/*"]
+    },
+    "target": "es2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "exclude": ["node_modules", ".next"],
+  "include": ["next-env.d.ts", "emotion.d.ts", "**/*.ts", "**/*.tsx"]
+}

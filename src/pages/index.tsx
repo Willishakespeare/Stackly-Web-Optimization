@@ -24,7 +24,7 @@ const ProjectsDataFake: IProject[] = [
     type: "Web | UI/UX",
     description: "project-desc-1",
     urlImage:
-      "https://res.cloudinary.com/stacklycode/image/upload/v1604710707/StacklyCodeImages/project2_stlr9u.png",
+      "https://res.cloudinary.com/stacklycode/image/upload/w_400,c_scale/v1604710707/StacklyCodeImages/project2_stlr9u.png",
     link: "https://www.google.com.mx",
   },
   {
@@ -33,7 +33,7 @@ const ProjectsDataFake: IProject[] = [
     type: "Web | UI/UX",
     description: "project-desc-2",
     urlImage:
-      "https://res.cloudinary.com/stacklycode/image/upload/v1604981586/StacklyCodeImages/Project7_jyrxur.png",
+      "https://res.cloudinary.com/stacklycode/image/upload/w_400,c_scale/v1604981586/StacklyCodeImages/Project7_jyrxur.png",
     link: "https://www.google.com.mx",
   },
   {
@@ -42,7 +42,7 @@ const ProjectsDataFake: IProject[] = [
     type: "Web | UI/UX",
     description: "project-desc-3",
     urlImage:
-      "https://res.cloudinary.com/stacklycode/image/upload/v1604981587/StacklyCodeImages/Project6_knc2lj.png",
+      "https://res.cloudinary.com/stacklycode/image/upload/w_400,c_scale/v1604981587/StacklyCodeImages/Project6_knc2lj.png",
     link: "https://www.google.com.mx",
   },
   {
@@ -51,7 +51,7 @@ const ProjectsDataFake: IProject[] = [
     type: "Web | UI/UX",
     description: "project-desc-4",
     urlImage:
-      "https://res.cloudinary.com/stacklycode/image/upload/v1604711349/StacklyCodeImages/project5_w7xkti.png",
+      "https://res.cloudinary.com/stacklycode/image/upload/w_400,c_scale/v1604711349/StacklyCodeImages/project5_w7xkti.png",
     link: "https://www.google.com.mx",
   },
   {
@@ -60,7 +60,7 @@ const ProjectsDataFake: IProject[] = [
     type: "Web | UI/UX",
     description: "project-desc-5",
     urlImage:
-      "https://res.cloudinary.com/stacklycode/image/upload/v1604711350/StacklyCodeImages/project3_h3911r.png",
+      "https://res.cloudinary.com/stacklycode/image/upload/w_400,c_scale/v1604711350/StacklyCodeImages/project3_h3911r.png",
     link: "https://www.google.com.mx",
   },
 ];

@@ -105,6 +105,7 @@ const AllProjectsContainer = styled.div`
   display: flex;
   align-self: baseline;
   width: max-content;
+  margin-top: 20px;
   button {
     margin: 20px 10px;
   }
@@ -112,6 +113,7 @@ const AllProjectsContainer = styled.div`
 const ButtonProject = styled.div`
   border: none;
   cursor: pointer;
+  margin-right: 20px;
 `;
 
 const OrganismProjects: React.FC<ProjectsProps> = ({

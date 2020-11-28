@@ -50,9 +50,6 @@ const FooterSocialContainer = styled.div<FooterProps>`
   a {
     width: 25px;
     margin-right: 30px;
-    span {
-      display: none;
-    }
   }
   a:nth-last-of-type(1) {
     margin-right: 0px;
@@ -87,22 +84,18 @@ const OrganismFooter: React.FC<FooterProps> = ({ t }) => {
               title="Facebook Page"
             >
               <AtomIcon icon="facebook" />
-              <span>Facebook</span>
             </a>
             <a
               href="https://www.linkedin.com/company/68642625/admin/"
               title="Linkedin Page"
             >
               <AtomIcon icon="linkedin" />
-              <span>Linkedin</span>
             </a>
-            <a href="https://github.com/StacklyCode">
+            <a href="https://github.com/StacklyCode" title="Github Page">
               <AtomIcon icon="github" />
-              <span>Github</span>
             </a>
-            <a href="https://twitter.com/StacklyCode">
+            <a href="https://twitter.com/StacklyCode" title="Twitter Page">
               <AtomIcon icon="twitter" />
-              <span>Twitter</span>
             </a>
           </FooterSocialContainer>
         </FooterContainer>

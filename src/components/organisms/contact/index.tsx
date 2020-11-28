@@ -123,24 +123,24 @@ const OrganismContact: React.FC<IContact> = ({ idScroll, t }) => {
             <FormLeftContainer>
               <AtomInput
                 id="name"
-                margin={["15px", "0px"]}
+                margin={["5px", "0px"]}
                 placeholder={t && t("contact-input-name")}
               />
               <AtomInput
                 id="Subject"
-                margin={["15px", "0px"]}
+                margin={["5px", "0px"]}
                 placeholder={t && t("contact-input-subject")}
               />
             </FormLeftContainer>
             <AtomInput
               id="email"
               type="email"
-              margin={["15px", "0px"]}
+              margin={["5px", "0px"]}
               placeholder={t && t("contact-input-email")}
             />
             <AtomInput
               id="message"
-              margin={["15px", "0px"]}
+              margin={["5px", "0px"]}
               placeholder={t && t("contact-input-message")}
               type="text"
             />

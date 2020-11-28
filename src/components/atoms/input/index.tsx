@@ -17,12 +17,17 @@ const InputStyled = styled.div<InputProps>`
   display: flex;
   align-items: center;
   label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.white};
     input {
       border: none;
       min-width: ${({ type }) => (type === "checkbox" ? "15px" : "180px")};
       font-family: Roboto;
       font-style: normal;
       font-weight: bold;
+      margin-top: 10px;
       font-size: 13px;
       line-height: 20px;
       padding-left: ${({ icon }) => (icon ? "43px" : "15px")};
@@ -134,6 +139,7 @@ const AtomInput: React.FC<InputProps> = ({
         </IconContainerStyled>
       )}
       <label htmlFor={id}>
+        {placeholder}
         <input
           id={id}
           type={(eye ? "text" : type) || "text"}

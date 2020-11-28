@@ -7,6 +7,7 @@ import OrganismClients from "@Organisms/clients";
 import OrganismContact from "@Organisms/contact";
 import Seo from "@Utils/seo";
 import I18n from "@Src/i18n";
+import { TFunction } from "next-i18next";
 
 type IProject = {
   id?: string;
@@ -64,8 +65,11 @@ const ProjectsDataFake: IProject[] = [
   },
 ];
 
-const PageHome = () => {
-  const { t } = I18n.useTranslation();
+type Props = {
+  t?: TFunction;
+};
+
+const PageHome = ({ t }: Props) => {
   return (
     <>
       <Seo
@@ -87,4 +91,8 @@ const PageHome = () => {
   );
 };
 
-export default PageHome;
+PageHome.getInitialProps = async () => ({
+  namespacesRequired: ["common"],
+});
+
+export default I18n.withTranslation(["common"])(PageHome);

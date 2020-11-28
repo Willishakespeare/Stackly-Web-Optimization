@@ -110,7 +110,7 @@ const MoleculesTags: React.FC<TagsProps> = ({
     <Tags>
       <TagColor color={color} />
       <TagContariner>
-        {img && <img src={img} alt="" />}
+        {img && <img loading="lazy" src={img} alt="" />}
         <div>
           <AtomTitle as="span" size="SubTitleSmall" color="black" bold>
             {title || "Some Title"}

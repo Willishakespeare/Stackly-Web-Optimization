@@ -6,9 +6,9 @@ const ThemeColor = {
   },
   accent: {
     green: {
-      base: "#35CE57",
-      light: "#95E1A6",
-      dark: "#269E40",
+      base: "#1E7732",
+      light: "#3E8347",
+      dark: "#1A672C",
     },
     red: {
       base: "#E63B64",

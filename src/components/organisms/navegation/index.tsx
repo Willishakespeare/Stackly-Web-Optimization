@@ -80,7 +80,7 @@ const NavigationLink = styled.div<NavegationProps>`
   margin-right: 20px;
 `;
 
-const IconSideBar = styled.button<NavegationProps>`
+const IconSideBar = styled.div<NavegationProps>`
   height: 30px;
   width: 30px;
   background-color: transparent;

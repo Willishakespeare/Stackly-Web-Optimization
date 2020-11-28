@@ -50,7 +50,7 @@ const TagContariner = styled.div<TagsProps>`
     margin-right: 20px;
   }
   div {
-    h6 {
+    span {
       text-align: left;
     }
     p {
@@ -112,7 +112,7 @@ const MoleculesTags: React.FC<TagsProps> = ({
       <TagContariner>
         {img && <img src={img} alt="" />}
         <div>
-          <AtomTitle as="h6" size="SubTitleSmall" color="black" bold>
+          <AtomTitle as="span" size="SubTitleSmall" color="black" bold>
             {title || "Some Title"}
           </AtomTitle>
           <AtomBody size="BodySmall" color="gray">

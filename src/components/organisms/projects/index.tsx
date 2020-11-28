@@ -109,7 +109,7 @@ const AllProjectsContainer = styled.div`
     margin: 20px 10px;
   }
 `;
-const ButtonProject = styled.button`
+const ButtonProject = styled.div`
   border: none;
   cursor: pointer;
 `;

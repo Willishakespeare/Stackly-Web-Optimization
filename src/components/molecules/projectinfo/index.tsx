@@ -43,7 +43,7 @@ const ContainerInfo = styled.div`
       text-align: left;
     }
   }
-  h5 {
+  span {
     text-align: center;
     ${({ theme }) => theme.mediaquery.medium} {
       text-align: left;
@@ -77,7 +77,7 @@ const MoleculeProjectInfo: React.FC<ProjectInfoProps> = ({
       <AtomImage background image={urlImage} />
       <ContainerInfo>
         <ContainerInfoTitle>
-          <AtomTitle align="left" bold size="SubTitleMedium">
+          <AtomTitle as="span" align="left" bold size="SubTitleMedium">
             {title}
           </AtomTitle>
           <AtomTitle color="gray" align="left" size="SubTitleMedium">

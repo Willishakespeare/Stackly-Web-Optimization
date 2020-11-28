@@ -68,20 +68,19 @@ const PageHome = () => {
   const { t } = I18n.useTranslation();
   return (
     <>
-      <Seo page="Home" />
+      <Seo
+        page="Home"
+        description="In Stackly Code we understand that time is the most valuable asset and if you put it in our hands, we will make sure to bring the best product for your needs."
+      />
       <TemplateMain t={t}>
         <OrganismHero t={t} idScroll="HeroScroll" />
-
         <OrganismServices t={t} idScroll="ServicesScroll" />
-
         <OrganismProjects
           t={t}
           idScroll="ProjectsScroll"
           projects={ProjectsDataFake}
         />
-
         <OrganismClients t={t} idScroll="ClientsScroll" />
-
         <OrganismContact t={t} idScroll="ContactScroll" />
       </TemplateMain>
     </>

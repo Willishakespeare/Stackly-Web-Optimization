@@ -23,11 +23,11 @@ const getColor = (
     case "black":
       return theme.colors.primary.base;
     case "gray":
-      return theme.colors.gray[300];
+      return theme.colors.gray[500];
     case "green":
       return theme.colors.accent.cyan.light;
     default:
-      return theme.colors.white;
+      return theme.colors.gray[100];
   }
 };
 

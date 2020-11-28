@@ -132,7 +132,7 @@ const OrganismProjects: React.FC<ProjectsProps> = ({
             <AtomTitle bold size="TitleMedium">
               {t && t("projects-title")}
             </AtomTitle>
-            <AtomBody size="BodyExtraLarge" color="gray">
+            <AtomBody size="BodyExtraLarge" color="white">
               {t && t("projects-desc")}
             </AtomBody>
           </ParagraphTitle>
@@ -157,7 +157,7 @@ const OrganismProjects: React.FC<ProjectsProps> = ({
             id={projectID?.id || (projects && projects[0].id)}
             link={projectID?.link || (projects && projects[0].link)}
           />
-          <AtomBody size="BodySmall" color="gray">
+          <AtomBody size="BodySmall" color="white">
             {t && t("projects-click")}
           </AtomBody>
           <ScrollProjectsContainer>

@@ -80,11 +80,11 @@ const MoleculeProjectInfo: React.FC<ProjectInfoProps> = ({
           <AtomTitle as="span" align="left" bold size="SubTitleMedium">
             {title}
           </AtomTitle>
-          <AtomTitle color="gray" align="left" size="SubTitleMedium">
+          <AtomTitle as="span" color="gray" align="left" size="SubTitleMedium">
             {type}
           </AtomTitle>
         </ContainerInfoTitle>
-        <AtomBody color="gray" align="left" size="BodyMedium">
+        <AtomBody color="white" align="left" size="BodyMedium">
           {description}
         </AtomBody>
         <AtomButton outline href={link}>

@@ -50,6 +50,9 @@ const FooterSocialContainer = styled.div<FooterProps>`
   a {
     width: 25px;
     margin-right: 30px;
+    span {
+      display: none;
+    }
   }
   a:nth-last-of-type(1) {
     margin-right: 0px;
@@ -79,17 +82,27 @@ const OrganismFooter: React.FC<FooterProps> = ({ t }) => {
             <FooterCopyrighted>{t && t("footer-desc")}</FooterCopyrighted>
           </LinkNext>
           <FooterSocialContainer>
-            <a href="https://www.facebook.com/StacklyCodeOfficial">
+            <a
+              href="https://www.facebook.com/StacklyCodeOfficial"
+              title="Facebook Page"
+            >
               <AtomIcon icon="facebook" />
+              <span>Facebook</span>
             </a>
-            <a href="https://www.linkedin.com/company/68642625/admin/">
+            <a
+              href="https://www.linkedin.com/company/68642625/admin/"
+              title="Linkedin Page"
+            >
               <AtomIcon icon="linkedin" />
+              <span>Linkedin</span>
             </a>
             <a href="https://github.com/StacklyCode">
               <AtomIcon icon="github" />
+              <span>Github</span>
             </a>
             <a href="https://twitter.com/StacklyCode">
               <AtomIcon icon="twitter" />
+              <span>Twitter</span>
             </a>
           </FooterSocialContainer>
         </FooterContainer>

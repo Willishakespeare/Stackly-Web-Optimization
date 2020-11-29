@@ -1,5 +1,4 @@
-import React from "react";
-import styled from "@emotion/styled";
+import styled  from "@emotion/styled";
 import Link from "next/link";
 
 type ButtonProps = {

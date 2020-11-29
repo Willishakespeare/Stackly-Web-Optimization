@@ -1,0 +1,21 @@
+{
+  "short_name": "Stackly Code",
+  "name": "Stackly Code",
+  "description": "We'll be in charge to bring to life your idea and give the best value for your users",
+  "icons": [
+    {
+      "src": "/logo-192.png",
+      "type": "images/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/logo-512.png",
+      "type": "images/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#414E6A",
+  "background_color": "#414E6A",
+  "display": "minimal-ui"
+}

@@ -1,4 +1,3 @@
-import React from "react";
 import dynamic from "next/dynamic";
 import TemplateMain from "@Templates/index";
 import OrganismHero from "@Organisms/hero";

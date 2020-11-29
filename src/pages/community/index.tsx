@@ -1,4 +1,3 @@
-import React from "react";
 import TemplateMain from "@Templates/index";
 import OrganismCommunity from "@Organisms/community";
 import { useTranslation } from "@Src/i18n";

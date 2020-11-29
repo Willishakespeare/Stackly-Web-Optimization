@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import AtomIcon from "@Atoms/icon";
 import { i18n } from "@Src/i18n";

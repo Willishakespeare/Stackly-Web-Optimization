@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import AtomContainer from "@Atoms/container";
 import IllustrationHero from "@Assets/img/illustration-services.svg";
 import AtomTitle from "@Atoms/title";

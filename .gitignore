@@ -30,3 +30,7 @@ yarn-error.log*
 .env.production.local
 
 .idea
+
+# locks
+package-lock.json
+yarn.lock

@@ -1,5 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
+import OrganismsNavigation from "@Organisms/navegation";
 import Seo from "@Utils/seo";
 import I18n from "@Src/i18n";
 import { TFunction } from "next-i18next";
@@ -66,7 +67,6 @@ type Props = {
 };
 
 const PageHome = ({ t }: Props) => {
-  const OrganismsNavigation = dynamic(() => import("@Organisms/navegation"));
   const OrganismHero = dynamic(() => import("@Organisms/hero"));
   const OrganismServices = dynamic(() => import("@Organisms/services"));
   const OrganismProjects = dynamic(() => import("@Organisms/projects"));
@@ -82,23 +82,23 @@ const PageHome = ({ t }: Props) => {
       />
       <OrganismsNavigation t={t} />
       <OrganismHero t={t} idScroll="HeroScroll" />
-      <LazyLoad once preventLoading throttle>
+      <LazyLoad debounce>
         <OrganismServices t={t} idScroll="ServicesScroll" />
       </LazyLoad>
-      <LazyLoad once preventLoading throttle>
+      <LazyLoad debounce>
         <OrganismProjects
           t={t}
           idScroll="ProjectsScroll"
           projects={ProjectsDataFake}
         />
       </LazyLoad>
-      <LazyLoad once preventLoading throttle>
+      <LazyLoad debounce>
         <OrganismClients t={t} idScroll="ClientsScroll" />
       </LazyLoad>
-      <LazyLoad once preventLoading throttle>
+      <LazyLoad debounce>
         <OrganismContact t={t} idScroll="ContactScroll" />
       </LazyLoad>
-      <LazyLoad once preventLoading throttle>
+      <LazyLoad debounce>
         <OrganismFooter t={t} />
       </LazyLoad>
     </>

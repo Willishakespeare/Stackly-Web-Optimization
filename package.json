@@ -17,6 +17,7 @@
     }
   },
   "dependencies": {
+    "@loadable/component": "^5.14.1",
     "next": "^10.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -29,7 +30,10 @@
     "@emotion/babel-plugin": "^11.0.0",
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/webpack-plugin": "^5.14.0",
     "@svgr/webpack": "^5.5.0",
+    "@types/loadable__component": "^5.13.1",
     "@types/node": "^14.14.10",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",

@@ -1,5 +1,5 @@
 import React from "react";
-import dynamic from "next/dynamic";
+import loadable from "@loadable/component";
 import TemplateMain from "@Templates/index";
 import OrganismHero from "@Organisms/hero";
 import Seo from "@Utils/seo";
@@ -68,10 +68,10 @@ type Props = {
 };
 
 const PageHome = ({ t }: Props) => {
-  const OrganismServices = dynamic(() => import("@Organisms/services"));
-  const OrganismProjects = dynamic(() => import("@Organisms/projects"));
-  const OrganismClients = dynamic(() => import("@Organisms/clients"));
-  const OrganismContact = dynamic(() => import("@Organisms/contact"));
+  const OrganismServices = loadable(() => import("@Organisms/services"));
+  const OrganismProjects = loadable(() => import("@Organisms/projects"));
+  const OrganismClients = loadable(() => import("@Organisms/clients"));
+  const OrganismContact = loadable(() => import("@Organisms/contact"));
 
   return (
     <TemplateMain t={t}>

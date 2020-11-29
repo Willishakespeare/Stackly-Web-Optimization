@@ -1,5 +1,8 @@
 import styled from "@emotion/styled";
-import dynamic from "next/dynamic";
+import AtomTitle from "@Atoms/title";
+import AtomBody from "@Atoms/body";
+import AtomContainer from "@Atoms/container";
+import AtomButton from "@Atoms/button";
 import { useSpring, animated } from "react-spring";
 import { TFunction } from "next-i18next";
 import { Link } from "react-scroll";
@@ -74,11 +77,6 @@ type IHero = {
   idScroll?: string;
   t?: TFunction;
 };
-
-const AtomTitle = dynamic(() => import("@Atoms/title"));
-const AtomBody = dynamic(() => import("@Atoms/body"));
-const AtomContainer = dynamic(() => import("@Atoms/container"));
-const AtomButton = dynamic(() => import("@Atoms/button"));
 
 const OrganismHero: React.FC<IHero> = ({ idScroll, t }) => {
   const props = useSpring({

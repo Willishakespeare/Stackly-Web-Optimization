@@ -1,5 +1,5 @@
 import React from "react";
-import loadable from "@loadable/component";
+import dynamic from "next/dynamic";
 import TemplateMain from "@Templates/index";
 import OrganismHero from "@Organisms/hero";
 import Seo from "@Utils/seo";
@@ -68,35 +68,37 @@ type Props = {
 };
 
 const PageHome = ({ t }: Props) => {
-  const OrganismServices = loadable(() => import("@Organisms/services"));
-  const OrganismProjects = loadable(() => import("@Organisms/projects"));
-  const OrganismClients = loadable(() => import("@Organisms/clients"));
-  const OrganismContact = loadable(() => import("@Organisms/contact"));
+  const OrganismServices = dynamic(() => import("@Organisms/services"));
+  const OrganismProjects = dynamic(() => import("@Organisms/projects"));
+  const OrganismClients = dynamic(() => import("@Organisms/clients"));
+  const OrganismContact = dynamic(() => import("@Organisms/contact"));
 
   return (
-    <TemplateMain t={t}>
+    <>
       <Seo
         page="Home"
         description="In Stackly Code we understand that time is the most valuable asset and if you put it in our hands, we will make sure to bring the best product for your needs."
       />
-      <OrganismHero t={t} idScroll="HeroScroll" />
-      <LazyLoad>
-        <OrganismServices t={t} idScroll="ServicesScroll" />
-      </LazyLoad>
-      <LazyLoad>
-        <OrganismProjects
-          t={t}
-          idScroll="ProjectsScroll"
-          projects={ProjectsDataFake}
-        />
-      </LazyLoad>
-      <LazyLoad>
-        <OrganismClients t={t} idScroll="ClientsScroll" />
-      </LazyLoad>
-      <LazyLoad>
-        <OrganismContact t={t} idScroll="ContactScroll" />
-      </LazyLoad>
-    </TemplateMain>
+      <TemplateMain t={t}>
+        <OrganismHero t={t} idScroll="HeroScroll" />
+        <LazyLoad>
+          <OrganismServices t={t} idScroll="ServicesScroll" />
+        </LazyLoad>
+        <LazyLoad>
+          <OrganismProjects
+            t={t}
+            idScroll="ProjectsScroll"
+            projects={ProjectsDataFake}
+          />
+        </LazyLoad>
+        <LazyLoad>
+          <OrganismClients t={t} idScroll="ClientsScroll" />
+        </LazyLoad>
+        <LazyLoad>
+          <OrganismContact t={t} idScroll="ContactScroll" />
+        </LazyLoad>
+      </TemplateMain>
+    </>
   );
 };
 

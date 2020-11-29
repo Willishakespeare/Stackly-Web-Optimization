@@ -116,11 +116,64 @@ const ButtonProject = styled.div`
   margin-right: 20px;
 `;
 
-const OrganismProjects: React.FC<ProjectsProps> = ({
-  idScroll,
-  projects,
-  t,
-}) => {
+type IProjectProps = {
+  id?: string;
+  title?: string;
+  type?: string;
+  description?: string;
+  urlImage?: string;
+  link?: string;
+};
+
+const ProjectsData: IProjectProps[] = [
+  {
+    id: "0",
+    title: "Landing page for Amara",
+    type: "Web | UI/UX",
+    description: "project-desc-1",
+    urlImage:
+      "https://res.cloudinary.com/stacklycode/image/upload/w_400,c_scale/v1604710707/StacklyCodeImages/project2_stlr9u.png",
+    link: "https://www.google.com.mx",
+  },
+  {
+    id: "1",
+    title: "Landing page for William",
+    type: "Web | UI/UX",
+    description: "project-desc-2",
+    urlImage:
+      "https://res.cloudinary.com/stacklycode/image/upload/w_400,c_scale/v1604981586/StacklyCodeImages/Project7_jyrxur.png",
+    link: "https://www.google.com.mx",
+  },
+  {
+    id: "2",
+    title: "Landing page for Company",
+    type: "Web | UI/UX",
+    description: "project-desc-3",
+    urlImage:
+      "https://res.cloudinary.com/stacklycode/image/upload/w_400,c_scale/v1604981587/StacklyCodeImages/Project6_knc2lj.png",
+    link: "https://www.google.com.mx",
+  },
+  {
+    id: "3",
+    title: "Landing page for Amara",
+    type: "Web | UI/UX",
+    description: "project-desc-4",
+    urlImage:
+      "https://res.cloudinary.com/stacklycode/image/upload/w_400,c_scale/v1604711349/StacklyCodeImages/project5_w7xkti.png",
+    link: "https://www.google.com.mx",
+  },
+  {
+    id: "4",
+    title: "Landing page for Amara",
+    type: "Web | UI/UX",
+    description: "project-desc-5",
+    urlImage:
+      "https://res.cloudinary.com/stacklycode/image/upload/w_400,c_scale/v1604711350/StacklyCodeImages/project3_h3911r.png",
+    link: "https://www.google.com.mx",
+  },
+];
+
+const OrganismProjects: React.FC<ProjectsProps> = ({ idScroll, t }) => {
   const [projectID, setProjectID] = useState<IProject | undefined>({});
   return (
     <Projects id={idScroll}>
@@ -149,28 +202,30 @@ const OrganismProjects: React.FC<ProjectsProps> = ({
             </Link>
           </ParagraphContainer>
           <MoleculeProjectInfo
-            title={projectID?.title || (projects && projects[0].title)}
-            urlImage={projectID?.urlImage || (projects && projects[0].urlImage)}
-            type={projectID?.type || (projects && projects[0].type)}
+            title={projectID?.title || (ProjectsData && ProjectsData[0].title)}
+            urlImage={
+              projectID?.urlImage || (ProjectsData && ProjectsData[0].urlImage)
+            }
+            type={projectID?.type || (ProjectsData && ProjectsData[0].type)}
             description={
               (projectID?.description && t && t(`${projectID.description}`)) ||
-              (t && t(`${projects && projects[0].description}`))
+              (t && t(`${ProjectsData && ProjectsData[0].description}`))
             }
-            id={projectID?.id || (projects && projects[0].id)}
-            link={projectID?.link || (projects && projects[0].link)}
+            id={projectID?.id || (ProjectsData && ProjectsData[0].id)}
+            link={projectID?.link || (ProjectsData && ProjectsData[0].link)}
           />
           <AtomBody size="BodySmall" color="white">
             {t && t("projects-click")}
           </AtomBody>
           <ScrollProjectsContainer>
             <AllProjectsContainer>
-              {projects?.map((item) => (
+              {ProjectsData?.map((item) => (
                 <ButtonProject
                   key={item.id}
                   id={item.id}
                   onClick={(e) =>
                     setProjectID(
-                      projects.find(
+                      ProjectsData.find(
                         (itemFind) => itemFind.id === e.currentTarget.id
                       )
                     )

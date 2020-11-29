@@ -17,11 +17,10 @@ const GlobalStyles = () => (
       :root {
         font-size: 16px;
       }
-      html {
-        width: 100vw;
-      }
+      html,
       body {
-        background-color: #fafafa;
+        width: 100vw;
+        background-color: #2e384c;
         overflow-x: hidden;
       }
 

@@ -1,7 +1,5 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import TemplateMain from "@Templates/index";
-import OrganismHero from "@Organisms/hero";
 import Seo from "@Utils/seo";
 import I18n from "@Src/i18n";
 import { TFunction } from "next-i18next";
@@ -68,10 +66,13 @@ type Props = {
 };
 
 const PageHome = ({ t }: Props) => {
+  const OrganismsNavigation = dynamic(() => import("@Organisms/navegation"));
+  const OrganismHero = dynamic(() => import("@Organisms/hero"));
   const OrganismServices = dynamic(() => import("@Organisms/services"));
   const OrganismProjects = dynamic(() => import("@Organisms/projects"));
   const OrganismClients = dynamic(() => import("@Organisms/clients"));
   const OrganismContact = dynamic(() => import("@Organisms/contact"));
+  const OrganismFooter = dynamic(() => import("@Organisms/footer"));
 
   return (
     <>
@@ -79,25 +80,27 @@ const PageHome = ({ t }: Props) => {
         page="Home"
         description="In Stackly Code we understand that time is the most valuable asset and if you put it in our hands, we will make sure to bring the best product for your needs."
       />
-      <TemplateMain t={t}>
-        <OrganismHero t={t} idScroll="HeroScroll" />
-        <LazyLoad once preventLoading throttle>
-          <OrganismServices t={t} idScroll="ServicesScroll" />
-        </LazyLoad>
-        <LazyLoad once preventLoading throttle>
-          <OrganismProjects
-            t={t}
-            idScroll="ProjectsScroll"
-            projects={ProjectsDataFake}
-          />
-        </LazyLoad>
-        <LazyLoad once preventLoading throttle>
-          <OrganismClients t={t} idScroll="ClientsScroll" />
-        </LazyLoad>
-        <LazyLoad once preventLoading throttle>
-          <OrganismContact t={t} idScroll="ContactScroll" />
-        </LazyLoad>
-      </TemplateMain>
+      <OrganismsNavigation t={t} />
+      <OrganismHero t={t} idScroll="HeroScroll" />
+      <LazyLoad once preventLoading throttle>
+        <OrganismServices t={t} idScroll="ServicesScroll" />
+      </LazyLoad>
+      <LazyLoad once preventLoading throttle>
+        <OrganismProjects
+          t={t}
+          idScroll="ProjectsScroll"
+          projects={ProjectsDataFake}
+        />
+      </LazyLoad>
+      <LazyLoad once preventLoading throttle>
+        <OrganismClients t={t} idScroll="ClientsScroll" />
+      </LazyLoad>
+      <LazyLoad once preventLoading throttle>
+        <OrganismContact t={t} idScroll="ContactScroll" />
+      </LazyLoad>
+      <LazyLoad once preventLoading throttle>
+        <OrganismFooter t={t} />
+      </LazyLoad>
     </>
   );
 };

@@ -14,7 +14,6 @@ const Contact = styled.section`
   justify-content: center;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.primary.dark};
-  background-image: url("/assets/img/background2.svg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;

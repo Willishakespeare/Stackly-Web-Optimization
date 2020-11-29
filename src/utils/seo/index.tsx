@@ -20,7 +20,11 @@ const Seo: React.FC<SeoProps> = ({ title, page, description }): JSX.Element => {
         name="keywords"
         content="stacklycode, stackly, code, development, frontend, backend, database, enterprice, community, discord, freenlacers"
       />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="manifest" href="/manifest.json" />
+      <meta name="theme-color" content="#292929" />
+      <link rel="apple-touch-icon" href="/logo-96x96.png" />
+      <meta name="apple-mobile-web-app-status-bar" content="#90cdf4" />
       <meta name="description" content={description} />
       <meta name="author" content="Stackly Code" />
       <meta name="copyright" content="Stackly Code" />

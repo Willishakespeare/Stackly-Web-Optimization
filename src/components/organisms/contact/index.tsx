@@ -4,6 +4,7 @@ import AtomTitle from "@Atoms/title";
 import AtomBody from "@Atoms/body";
 import AtomButton from "@Atoms/button";
 import AtomInput from "@Atoms/input";
+import IllustrationHero from "@Assets/img/illustration-contact.svg";
 import { TFunction } from "next-i18next";
 
 const Contact = styled.section`
@@ -149,7 +150,7 @@ const OrganismContact: React.FC<IContact> = ({ idScroll, t }) => {
           </FormContainer>
         </TextContainer>
         <IllustrationContainer>
-          <span>poner un svg</span>
+          <IllustrationHero />
         </IllustrationContainer>
       </AtomContainer>
     </Contact>

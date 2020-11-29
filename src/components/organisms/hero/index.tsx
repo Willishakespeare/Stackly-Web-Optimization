@@ -6,6 +6,7 @@ import AtomButton from "@Atoms/button";
 import { useSpring, animated } from "react-spring";
 import { TFunction } from "next-i18next";
 import { Link } from "react-scroll";
+import IllustrationHero from "@Assets/img/illustration-hero.svg";
 
 const Hero = styled.section`
   background: ${({ theme }) => theme.colors.white};
@@ -46,7 +47,6 @@ const IllustrationContainer = styled(animated.div)`
   justify-content: center;
   svg {
     width: 100%;
-    height: 100%;
   }
 `;
 
@@ -109,7 +109,7 @@ const OrganismHero: React.FC<IHero> = ({ idScroll, t }) => {
           </ButtonContainer>
         </TextContainer>
         <IllustrationContainer style={props2}>
-          <span>poner un svg</span>
+          <IllustrationHero />
         </IllustrationContainer>
       </AtomContainer>
     </Hero>

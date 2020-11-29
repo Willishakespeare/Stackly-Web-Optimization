@@ -9,7 +9,8 @@
     "precommit": "npm run lint:fix",
     "lint": "eslint ./src/**/*.{ts,tsx}",
     "lint:fix": "eslint --fix --ext .ts,.tsx .",
-    "deploy": "npm run build && pm2 start npm --name 'stacklycode' -- start"
+    "deploy": "npm run build && pm2 start npm --name 'stacklycode' -- start",
+    "server": "node ./src/server.js"
   },
   "husky": {
     "hooks": {
@@ -19,6 +20,7 @@
   "dependencies": {
     "@loadable/component": "^5.14.1",
     "next": "^10.0.3",
+    "next-pwa": "^3.1.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-lazyload": "^3.1.0",
@@ -41,7 +43,6 @@
     "babel-plugin-minify-simplify": "^0.5.1",
     "babel-plugin-transform-remove-undefined": "^0.5.0",
     "next-i18next": "^7.0.1",
-    "next-offline": "^5.0.3",
     "next-react-svg": "^1.1.2",
     "typescript": "^4.1.2"
   }

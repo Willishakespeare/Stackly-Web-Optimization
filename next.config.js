@@ -2,28 +2,29 @@
 const withReactSvg = require("next-react-svg");
 const path = require("path");
 const { nextI18NextRewrites } = require("next-i18next/rewrites");
-const withOffline = require("next-offline");
 const localeSubpaths = {};
+const withPWA = require("next-pwa");
 
-const nextConfig = {};
+module.exports = withPWA(
+  withReactSvg({
+    include: path.resolve(__dirname, "src/assets/icons"),
+    webpack(config) {
+      config.module.rules.push({
+        test: /\.svg$/,
+        issuer: {
+          test: /\.(js|ts)x?$/,
+        },
+        use: ["@svgr/webpack"],
+      });
 
-module.exports = withOffline(nextConfig);
-
-module.exports = withReactSvg({
-  include: path.resolve(__dirname, "src/assets/icons"),
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      issuer: {
-        test: /\.(js|ts)x?$/,
-      },
-      use: ["@svgr/webpack"],
-    });
-
-    return config;
-  },
-  rewrites: async () => nextI18NextRewrites(localeSubpaths),
-  publicRuntimeConfig: {
-    localeSubpaths,
-  },
-});
+      return config;
+    },
+    rewrites: async () => nextI18NextRewrites(localeSubpaths),
+    publicRuntimeConfig: {
+      localeSubpaths,
+    },
+    pwa: {
+      dest: "public",
+    },
+  })
+);

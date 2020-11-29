@@ -6,6 +6,7 @@ import AtomBody from "@Atoms/body";
 import { useSpring, animated } from "react-spring";
 import AtomButton from "@Atoms/button";
 import { TFunction } from "next-i18next";
+import IllustrationHero from "@Assets/img/illustration-community.svg";
 
 const Community = styled.section`
   background: ${({ theme }) => theme.colors.white};
@@ -32,8 +33,7 @@ const IllustrationContainer = styled(animated.div)`
   align-items: center;
   justify-content: center;
   svg {
-    width: 100%;
-    height: 100%;
+    width: 70%;
   }
 `;
 
@@ -104,7 +104,7 @@ const OrganismCommunity: React.FC<ICommunity> = ({ idScroll, t }) => {
           </AtomButton>
         </TextContainer>
         <IllustrationContainer style={props2}>
-          <span>poner un svg</span>
+          <IllustrationHero />
         </IllustrationContainer>
       </AtomContainer>
     </Community>

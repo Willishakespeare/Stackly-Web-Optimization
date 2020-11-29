@@ -106,6 +106,7 @@ const AllProjectsContainer = styled.div`
   align-self: baseline;
   width: max-content;
   margin-top: 20px;
+  margin-bottom: 20px;
   button {
     margin: 20px 10px;
   }

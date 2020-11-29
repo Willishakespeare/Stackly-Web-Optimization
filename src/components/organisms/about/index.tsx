@@ -5,6 +5,7 @@ import AtomTitle from "@Atoms/title";
 import AtomBody from "@Atoms/body";
 import { useSpring, animated } from "react-spring";
 import { TFunction } from "next-i18next";
+import IllustrationHero from "@Assets/img/illustration-about.svg";
 
 const About = styled.section`
   background: ${({ theme }) => theme.colors.white};
@@ -99,7 +100,7 @@ const OrganismAbout: React.FC<IAbout> = ({ idScroll, t }) => {
           </AtomBody>
         </TextContainer>
         <IllustrationContainer style={props2}>
-          <span>poner un svg</span>
+          <IllustrationHero />
         </IllustrationContainer>
       </AtomContainer>
     </About>

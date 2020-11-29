@@ -2,7 +2,13 @@
   "presets": ["next/babel"],
   "env": {
     "production": {
-      "plugins": ["@emotion"]
+      "plugins": [
+        ["@emotion"],
+        ["@babel/plugin-transform-arrow-functions"],
+        ["minify-dead-code-elimination"],
+        ["minify-simplify"],
+        ["babel-plugin-transform-remove-undefined"]
+      ]
     },
     "development": {
       "plugins": [["@emotion", { "sourceMap": true }]]

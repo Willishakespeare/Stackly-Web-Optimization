@@ -1,13 +1,11 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import TemplateMain from "@Templates/index";
 import OrganismHero from "@Organisms/hero";
-import OrganismServices from "@Organisms/services";
-import OrganismProjects from "@Organisms/projects";
-import OrganismClients from "@Organisms/clients";
-import OrganismContact from "@Organisms/contact";
 import Seo from "@Utils/seo";
 import I18n from "@Src/i18n";
 import { TFunction } from "next-i18next";
+import LazyLoad from "react-lazyload";
 
 type IProject = {
   id?: string;
@@ -70,24 +68,35 @@ type Props = {
 };
 
 const PageHome = ({ t }: Props) => {
+  const OrganismServices = dynamic(() => import("@Organisms/services"));
+  const OrganismProjects = dynamic(() => import("@Organisms/projects"));
+  const OrganismClients = dynamic(() => import("@Organisms/clients"));
+  const OrganismContact = dynamic(() => import("@Organisms/contact"));
+
   return (
-    <>
+    <TemplateMain t={t}>
       <Seo
         page="Home"
         description="In Stackly Code we understand that time is the most valuable asset and if you put it in our hands, we will make sure to bring the best product for your needs."
       />
-      <TemplateMain t={t}>
-        <OrganismHero t={t} idScroll="HeroScroll" />
+      <OrganismHero t={t} idScroll="HeroScroll" />
+      <LazyLoad>
         <OrganismServices t={t} idScroll="ServicesScroll" />
+      </LazyLoad>
+      <LazyLoad>
         <OrganismProjects
           t={t}
           idScroll="ProjectsScroll"
           projects={ProjectsDataFake}
         />
+      </LazyLoad>
+      <LazyLoad>
         <OrganismClients t={t} idScroll="ClientsScroll" />
+      </LazyLoad>
+      <LazyLoad>
         <OrganismContact t={t} idScroll="ContactScroll" />
-      </TemplateMain>
-    </>
+      </LazyLoad>
+    </TemplateMain>
   );
 };
 

@@ -8,7 +8,17 @@
         ["minify-dead-code-elimination"],
         ["minify-simplify"],
         ["babel-plugin-transform-remove-undefined"],
-        ["@loadable/babel-plugin"]
+        [
+          "@babel/plugin-transform-runtime",
+          {
+            "absoluteRuntime": false,
+            "corejs": false,
+            "helpers": true,
+            "regenerator": true,
+            "useESModules": false,
+            "version": "7.0.0-beta.0"
+          }
+        ]
       ]
     },
     "development": {

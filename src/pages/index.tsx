@@ -81,20 +81,20 @@ const PageHome = ({ t }: Props) => {
       />
       <TemplateMain t={t}>
         <OrganismHero t={t} idScroll="HeroScroll" />
-        <LazyLoad>
+        <LazyLoad once preventLoading throttle>
           <OrganismServices t={t} idScroll="ServicesScroll" />
         </LazyLoad>
-        <LazyLoad>
+        <LazyLoad once preventLoading throttle>
           <OrganismProjects
             t={t}
             idScroll="ProjectsScroll"
             projects={ProjectsDataFake}
           />
         </LazyLoad>
-        <LazyLoad>
+        <LazyLoad once preventLoading throttle>
           <OrganismClients t={t} idScroll="ClientsScroll" />
         </LazyLoad>
-        <LazyLoad>
+        <LazyLoad once preventLoading throttle>
           <OrganismContact t={t} idScroll="ContactScroll" />
         </LazyLoad>
       </TemplateMain>
